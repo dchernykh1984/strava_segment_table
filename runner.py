@@ -1,3 +1,7 @@
+import platform
+
+from selenium import webdriver
+
 from config import (
     segment_id,
     strava_login,
@@ -7,13 +11,25 @@ from config import (
 )
 from pages.login_page import LoginPage
 from pages.segment_page import SegmentPage
-
-from selenium import webdriver
-
 # Set the path to the chromedriver executable
 from results_processing.results_table import ResultsTable
 
-chromedriver_path_os_part = "chromedriver_mac_arm64"
+
+def get_chromedriver_path():
+    system = platform.system()
+    machine = platform.machine()
+    if system == 'Linux' and machine == 'x86_64':
+        return 'chromedriver_linux64'
+    elif system == 'Darwin' and machine == 'arm64':
+        return 'chromedriver_mac_arm64'
+    elif system == 'Darwin' and machine == 'x86_64':
+        return 'chromedriver_mac64'
+    elif system == 'Windows':
+        return 'chromedriver_win32'
+    else:
+        raise ValueError(f'Unsupported system: {system} {machine}')
+
+chromedriver_path_os_part = get_chromedriver_path()
 chromedriver_path = f"chrome_driver/{chromedriver_path_os_part}/chromedriver"
 # Create a new Chrome browser instance
 driver = webdriver.Chrome(chromedriver_path)
@@ -31,9 +47,9 @@ for group_name, segment_filter in groups.items():
     results = ResultsTable(leaderboard, group_name, protocol_columns)
     calculate_score(results)
     with open(f"{group_name}_{segment_id}.txt", "w") as protocol:
-        protocol.write(str(results))
+        protocol.write(f"Link to segment table: {segment_page.segment_url}\n{str(results)}")
     with open(f"{group_name}_{segment_id}_raw.txt", "w") as raw_data:
-        raw_data.write(str(leaderboard))
+        raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
 
 
 # driver.quit()
