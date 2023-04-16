@@ -4,7 +4,6 @@ from urllib.parse import urlparse, urlencode
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-from results_table import ResultsTable
 from selenium.webdriver.support import expected_conditions as EC
 
 
@@ -38,7 +37,7 @@ class SegmentPage:
         for row in rows:
             cells = row.find_elements(By.TAG_NAME, "td")
             if len(cells) >= 4:
-                rank = cells[0].text.strip()
+                rank = cells[0].text.strip() if cells[0].text else "1"
                 athlete_name = cells[1].text.strip()
                 date = cells[2].text.strip()
                 result = cells[7].text.strip()
@@ -47,14 +46,17 @@ class SegmentPage:
                 attempt_url = cells[2].find_element(By.TAG_NAME, "a").get_attribute("href")
                 if athlete_id_match:
                     athlete_id = athlete_id_match.group(1)
-                leaderboard.append({
-                    "rank": rank,
-                    "athlete_name": athlete_name,
-                    "athlete_id": athlete_id,
-                    "result": result,
-                    "date": date,
-                    "attempt_url":attempt_url
-                })
+                leaderboard.append(
+                    {
+                        "rank": rank,
+                        "athlete_name": athlete_name,
+                        "athlete_id": athlete_id,
+                        "result": result,
+                        "date": date,
+                        "attempt_url": attempt_url,
+                        "athlete_url": athlete_url,
+                    }
+                )
         self.leaderboard = leaderboard
         return leaderboard
 
@@ -65,12 +67,11 @@ class SegmentPage:
             leaderboard = self.get_leaderboard()
             full_leaderboard.extend(leaderboard)
             next_page_button = self.driver.find_elements(*self.NEXT_PAGE_BUTTON)
-            if len(next_page_button) > 0 and not next_page_button[0].get_attribute("class").startswith("disabled"):
+            if len(next_page_button) > 0 and not next_page_button[0].get_attribute(
+                "class"
+            ).startswith("disabled"):
                 next_page_button[0].find_element(By.TAG_NAME, "a").click()
                 current_page += 1
             else:
                 break
         return full_leaderboard
-
-    def get_results(self) -> ResultsTable:
-        return ResultsTable()
