@@ -30,14 +30,6 @@ groups = {
         "gender": "M",
         "weight_class": "75_84",
     },
-    "Absolute": {
-        "age_group": "35_44",
-        "club_id": "156006",
-        # "date_range": "this_month",
-        "filter": "club",
-        "gender": "all",
-        "weight_class": "75_84",
-    },
 }
 
 
