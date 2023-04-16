@@ -46,9 +46,9 @@ for group_name, segment_filter in groups.items():
 
     results = ResultsTable(leaderboard, group_name, protocol_columns)
     calculate_score(results)
-    with open(f"{group_name}_{segment_id}.txt", "w") as protocol:
+    with open(f"{group_name}_{segment_id}.txt", "w", encoding="utf-8") as protocol:
         protocol.write(f"Link to segment table: {segment_page.segment_url}\n{str(results)}")
-    with open(f"{group_name}_{segment_id}_raw.txt", "w") as raw_data:
+    with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
         raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
 
 
