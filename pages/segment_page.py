@@ -1,4 +1,5 @@
 import re
+from time import sleep
 from urllib.parse import urlparse, urlencode
 
 from selenium.webdriver.common.by import By
@@ -31,8 +32,7 @@ class SegmentPage:
     def get_leaderboard(self):
         leaderboard = []
         wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.presence_of_element_located(self.LEADERBOARD_TABLE))
-        table = self.driver.find_element(*self.LEADERBOARD_TABLE)
+        table = wait.until(EC.presence_of_element_located(self.LEADERBOARD_TABLE))
         rows = table.find_elements(*self.LEADERBOARD_ROWS)
         for row in rows:
             cells = row.find_elements(By.TAG_NAME, "td")
@@ -71,6 +71,7 @@ class SegmentPage:
                 "class"
             ).startswith("disabled"):
                 next_page_button[0].find_element(By.TAG_NAME, "a").click()
+                sleep(1)
                 current_page += 1
             else:
                 break
