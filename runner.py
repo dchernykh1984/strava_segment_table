@@ -1,6 +1,6 @@
 from config import segment_id, strava_login, strava_password
-from login_page import LoginPage
-from segment_page import SegmentPage
+from pages.login_page import LoginPage
+from pages.segment_page import SegmentPage
 
 from selenium import webdriver
 
