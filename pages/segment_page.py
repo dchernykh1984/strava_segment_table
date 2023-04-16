@@ -71,7 +71,7 @@ class SegmentPage:
                 "class"
             ).startswith("disabled"):
                 next_page_button[0].find_element(By.TAG_NAME, "a").click()
-                sleep(1)
+                sleep(5)
                 current_page += 1
             else:
                 break
