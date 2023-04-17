@@ -1,2 +1,0 @@
-Total protocol
-Name	ID	Stages_scores	Total_score	Stage_rewards	Cup_reward	Total_reward	Link_to_athlete

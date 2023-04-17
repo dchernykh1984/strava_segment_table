@@ -9,6 +9,7 @@ from config import (
     segment_protocol_columns,
     total_protocol_columns,
     total_score_calculator,
+    total_protocol_sort_by,
 )
 from credentials import (
     strava_login,
@@ -47,7 +48,16 @@ login_page.set_email(email=strava_login)
 login_page.set_password(password=strava_password)
 login_page.click_login()
 
+with open(f"results.txt", "w", encoding="utf-8") as protocol:
+    protocol.write(f"Results of strava cup")
+with open(f"results.html", "w", encoding="utf-8") as html_protocol:
+    html_protocol.write(f"Results of strava cup<BR>\n")
+
 for group_name, segment_filter in groups.items():
+    with open(f"results.txt", "a", encoding="utf-8") as protocol:
+        protocol.write(f"Group {group_name} results")
+    with open(f"results.html", "a", encoding="utf-8") as html_protocol:
+        html_protocol.write(f"<BR><b>Group {group_name} results</b><BR>\n")
     group_results = []
     for segment_id in segment_ids:
         segment_page = SegmentPage(driver, segment_id, **segment_filter)
@@ -56,23 +66,24 @@ for group_name, segment_filter in groups.items():
 
         segment_results = ResultsTable(leaderboard, group_name, segment_protocol_columns)
         calculate_stage_score(segment_results)
-        with open(f"{group_name}_{segment_id}.txt", "w", encoding="utf-8") as protocol:
+        with open(f"results.txt", "a", encoding="utf-8") as protocol:
             protocol.write(
                 f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}"
             )
-        with open(f"{group_name}_{segment_id}.html", "w", encoding="utf-8") as html_protocol:
+        with open(f"results.html", "a", encoding="utf-8") as html_protocol:
             html_protocol.write(
-                f"Link to segment table: {segment_page.segment_url}\n<BR><BR>{segment_results.to_html()}"
+                f'<a href="{segment_page.segment_url}">Segment</a> results: \n'
+                f'<BR>{segment_results.to_html()}'
             )
         with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
             raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
         group_results.append(segment_results)
     cup_table = CupTable(group_results, group_name, total_protocol_columns)
     total_score_calculator(cup_table)
-    cup_table.sort_by_total_reward()
-    with open(f"{group_name}_total.txt", "w", encoding="utf-8") as protocol:
-        protocol.write(f"Total protocol\n{str(cup_table)}")
-    with open(f"{group_name}_total.html", "w", encoding="utf-8") as html_protocol:
-        html_protocol.write(f"Total protocol\n<BR><BR>{cup_table.to_html()}")
+    cup_table.sort_by(total_protocol_sort_by)
+    with open(f"results.txt", "a", encoding="utf-8") as protocol:
+        protocol.write(f"Cup results\n{str(cup_table)}")
+    with open(f"results.html", "a", encoding="utf-8") as html_protocol:
+        html_protocol.write(f"Cup results\n<BR>{cup_table.to_html()}")
 
 driver.quit()
