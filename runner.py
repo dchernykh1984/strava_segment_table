@@ -50,13 +50,13 @@ login_page.click_login()
 
 with open(f"results.txt", "w", encoding="utf-8") as protocol:
     protocol.write(f"Results of strava cup")
-with open(f"results.html", "w", encoding="utf-8") as html_protocol:
+with open(f"index.html", "w", encoding="utf-8") as html_protocol:
     html_protocol.write(f"Results of strava cup<BR>\n")
 
 for group_name, segment_filter in groups.items():
     with open(f"results.txt", "a", encoding="utf-8") as protocol:
         protocol.write(f"Group {group_name} results")
-    with open(f"results.html", "a", encoding="utf-8") as html_protocol:
+    with open(f"index.html", "a", encoding="utf-8") as html_protocol:
         html_protocol.write(f"<BR><b>Group {group_name} results</b><BR>\n")
     group_results = []
     for segment_id in segment_ids:
@@ -71,7 +71,7 @@ for group_name, segment_filter in groups.items():
             protocol.write(
                 f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}"
             )
-        with open(f"results.html", "a", encoding="utf-8") as html_protocol:
+        with open(f"index.html", "a", encoding="utf-8") as html_protocol:
             html_protocol.write(
                 f'<a href="{segment_page.segment_url}">{segment_name}</a> segment results: \n'
                 f'<BR>{segment_results.to_html()}'
@@ -84,7 +84,7 @@ for group_name, segment_filter in groups.items():
     cup_table.sort_by(total_protocol_sort_by)
     with open(f"results.txt", "a", encoding="utf-8") as protocol:
         protocol.write(f"Cup results\n{str(cup_table)}")
-    with open(f"results.html", "a", encoding="utf-8") as html_protocol:
+    with open(f"index.html", "a", encoding="utf-8") as html_protocol:
         html_protocol.write(f"Cup results\n<BR>{cup_table.to_html()}")
 
 driver.quit()
