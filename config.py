@@ -1,8 +1,8 @@
 from results_processing.group_protocol import CupTable
 from results_processing.results_table import ResultsTable
 
-prize_fund_stage = {"Female":10.0, "Male":100.0}
-prize_fund_total = {"Female":90.0, "Male":900.0}
+prize_fund_stage = {"Female": 10.0, "Male": 100.0}
+prize_fund_total = {"Female": 90.0, "Male": 900.0}
 segment_ids = ["7190094", "7258238"]
 segment_protocol_columns = {
     "Rank": "rank",
@@ -20,7 +20,7 @@ total_protocol_columns = {
     "Stage_rewards": "stages_rewards",
     "Cup_reward": "cup_reward",
     "Total_reward": "total_reward",
-    "Link_to_athlete":"athlete_url"
+    "Link_to_athlete": "athlete_url",
 }
 
 groups = {
@@ -45,10 +45,14 @@ groups = {
 
 def calculate_stage_score(results_table: ResultsTable):
     for competitor in results_table.table:
-        competitor.score = 100.0 * results_table.get_leader().time_in_seconds / competitor.time_in_seconds
+        competitor.score = (
+            100.0 * results_table.get_leader().time_in_seconds / competitor.time_in_seconds
+        )
     sum_score = sum([competitor.score for competitor in results_table.table])
     for competitor in results_table.table:
-        competitor.reward = competitor.score * prize_fund_stage[results_table.group_name] / sum_score
+        competitor.reward = (
+            competitor.score * prize_fund_stage[results_table.group_name] / sum_score
+        )
 
 
 def total_score_calculator(results_table: CupTable):
@@ -56,5 +60,7 @@ def total_score_calculator(results_table: CupTable):
         competitor.cup_score = sum(competitor.stages_scores)
     cup_sum_score = sum([competitor.cup_score for competitor in results_table.table])
     for competitor in results_table.table:
-        competitor.cup_reward = competitor.cup_score * prize_fund_stage[results_table.group_name] / cup_sum_score
+        competitor.cup_reward = (
+            competitor.cup_score * prize_fund_stage[results_table.group_name] / cup_sum_score
+        )
         competitor.total_reward = competitor.cup_reward + sum(competitor.stages_rewards)

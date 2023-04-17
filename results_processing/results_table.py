@@ -1,5 +1,7 @@
 from datetime import time, datetime
+
 from pages.output_page import table_to_html
+
 
 class ResultsItem:
     def __init__(self, data: dict, output_format):
@@ -32,7 +34,10 @@ class ResultsItem:
 
     def __repr__(self) -> str:
         return "\t".join(
-            [str(getattr(self, self.output_format[column_name])) for column_name in self.output_format]
+            [
+                str(getattr(self, self.output_format[column_name]))
+                for column_name in self.output_format
+            ]
         )
 
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from results_processing.results_table import ResultsTable, ResultsItem
 from pages.output_page import table_to_html
+from results_processing.results_table import ResultsTable, ResultsItem
 
 
 class CupItem:
@@ -25,7 +25,10 @@ class CupItem:
 
     def __repr__(self) -> str:
         return "\t".join(
-            [str(getattr(self, self.output_format[column_name])) for column_name in self.output_format]
+            [
+                str(getattr(self, self.output_format[column_name]))
+                for column_name in self.output_format
+            ]
         )
 
 
@@ -56,7 +59,9 @@ class CupTable:
         return None
 
     def sort_by_total_reward(self):
-        self.table = sorted(self.table, key=lambda competotor: competotor.total_reward, reverse=True)
+        self.table = sorted(
+            self.table, key=lambda competotor: competotor.total_reward, reverse=True
+        )
 
     def __str__(self) -> str:
         return self.__repr__()

@@ -2,16 +2,21 @@ import platform
 
 from selenium import webdriver
 
-from credentials import (    strava_login,
-    strava_password,
-)
 from config import (
     segment_ids,
     groups,
-    calculate_stage_score, segment_protocol_columns, total_protocol_columns, total_score_calculator,
+    calculate_stage_score,
+    segment_protocol_columns,
+    total_protocol_columns,
+    total_score_calculator,
+)
+from credentials import (
+    strava_login,
+    strava_password,
 )
 from pages.login_page import LoginPage
 from pages.segment_page import SegmentPage
+
 # Set the path to the chromedriver executable
 from results_processing.group_protocol import CupTable
 from results_processing.results_table import ResultsTable
@@ -52,9 +57,13 @@ for group_name, segment_filter in groups.items():
         segment_results = ResultsTable(leaderboard, group_name, segment_protocol_columns)
         calculate_stage_score(segment_results)
         with open(f"{group_name}_{segment_id}.txt", "w", encoding="utf-8") as protocol:
-            protocol.write(f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}")
+            protocol.write(
+                f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}"
+            )
         with open(f"{group_name}_{segment_id}.html", "w", encoding="utf-8") as html_protocol:
-            html_protocol.write(f"Link to segment table: {segment_page.segment_url}\n<BR><BR>{segment_results.to_html()}")
+            html_protocol.write(
+                f"Link to segment table: {segment_page.segment_url}\n<BR><BR>{segment_results.to_html()}"
+            )
         with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
             raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
         group_results.append(segment_results)
