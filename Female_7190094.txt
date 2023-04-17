@@ -1,11 +1,11 @@
 Link to segment table: https://www.strava.com/segments/7190094
-Rank	Name	Result	Score	Reward	Link to attempt
-1	Faina Potapova	00:06:26	100.0	15871.408246642262	https://www.strava.com/segment_efforts/2862222963493234268
-2	Ekaterina 🐎 Stepanova	00:06:28	99.48453608247422	15789.596863927609	https://www.strava.com/segment_efforts/2743432038256845638
-3	Nadia :P	00:06:45	95.30864197530865	15126.823662231884	https://www.strava.com/segment_efforts/2866602647908150830
-4	Zhanar Terekbay	00:09:43	66.20926243567753	10508.34233825714	https://www.strava.com/segment_efforts/2746029278403541440
-5	Madina Akbayeva	00:10:33	60.97946287519747	9678.299499532248	https://www.strava.com/segment_efforts/2974324586279201176
-6	Анастасия Донец	00:10:42	60.124610591900314	9542.622403744414	https://www.strava.com/segment_efforts/2954298123330345206
-7	Svetlana Krassilnikova	00:11:28	56.104651162790695	8904.598231401036	https://www.strava.com/segment_efforts/58714348652
-8	Marina Varibrus	00:13:13	48.675914249684745	7725.5530683529805	https://www.strava.com/segment_efforts/2737211651404381056
-9	Evgenia Tkacheva	00:14:54	43.17673378076063	6852.755685910417	https://www.strava.com/segment_efforts/49338400892
+Rank	Name	Result	Score	Reward	Link_to_attempt
+1	Faina Potapova	00:06:26	100.0	1587.140824664226	https://www.strava.com/segment_efforts/2862222963493234268
+2	Ekaterina 🐎 Stepanova	00:06:28	99.48453608247422	1578.9596863927611	https://www.strava.com/segment_efforts/2743432038256845638
+3	Nadia :P	00:06:45	95.30864197530865	1512.6823662231884	https://www.strava.com/segment_efforts/2866602647908150830
+4	Zhanar Terekbay	00:09:43	66.20926243567753	1050.8342338257141	https://www.strava.com/segment_efforts/2746029278403541440
+5	Madina Akbayeva	00:10:33	60.97946287519747	967.8299499532247	https://www.strava.com/segment_efforts/2974324586279201176
+6	Анастасия Донец	00:10:42	60.124610591900314	954.2622403744414	https://www.strava.com/segment_efforts/2954298123330345206
+7	Svetlana Krassilnikova	00:11:28	56.104651162790695	890.4598231401036	https://www.strava.com/segment_efforts/58714348652
+8	Marina Varibrus	00:13:13	48.675914249684745	772.555306835298	https://www.strava.com/segment_efforts/2737211651404381056
+9	Evgenia Tkacheva	00:14:54	43.17673378076063	685.2755685910417	https://www.strava.com/segment_efforts/49338400892
