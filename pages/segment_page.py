@@ -40,7 +40,7 @@ class SegmentPage:
                 rank = cells[0].text.strip() if cells[0].text else "1"
                 athlete_name = cells[1].text.strip()
                 date = cells[2].text.strip()
-                result = cells[7].text.strip()
+                result = cells[-1].text.strip()
                 athlete_url = cells[1].find_element(By.TAG_NAME, "a").get_attribute("href")
                 athlete_id_match = re.search(r"/athletes/(\d+)", athlete_url)
                 attempt_url = cells[2].find_element(By.TAG_NAME, "a").get_attribute("href")
