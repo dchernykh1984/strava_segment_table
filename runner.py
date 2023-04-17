@@ -88,3 +88,4 @@ for group_name, segment_filter in groups.items():
         html_protocol.write(f"Cup results\n<BR>{cup_table.to_html()}")
 
 driver.quit()
+print("Results is located https://dchernykh1984.github.io/strava_segment_table/")
