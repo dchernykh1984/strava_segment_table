@@ -2,10 +2,11 @@ import platform
 
 from selenium import webdriver
 
+from credentials import (    strava_login,
+    strava_password,
+)
 from config import (
     segment_ids,
-    strava_login,
-    strava_password,
     groups,
     calculate_stage_score, segment_protocol_columns, total_protocol_columns, total_score_calculator,
 )

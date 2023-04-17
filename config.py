@@ -3,8 +3,6 @@ from results_processing.results_table import ResultsTable
 
 prize_fund_stage = {"Female":10.0, "Male":100.0}
 prize_fund_total = {"Female":90.0, "Male":900.0}
-strava_login = "my_login"
-strava_password = "my_password"
 segment_ids = ["7190094", "7258238"]
 segment_protocol_columns = {
     "Rank": "rank",
