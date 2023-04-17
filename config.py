@@ -13,6 +13,7 @@ segment_protocol_columns = {
     "Link_to_attempt": "attempt_url",
 }
 total_protocol_columns = {
+    "Rank": "rank",
     "Name": "athlete_name",
     "ID": "athlete_id",
     "Stages_scores": "stages_scores",
@@ -22,6 +23,7 @@ total_protocol_columns = {
     "Total_reward": "total_reward",
     "Link_to_athlete": "athlete_url",
 }
+total_protocol_sort_by = "total_reward"
 
 groups = {
     "Female": {

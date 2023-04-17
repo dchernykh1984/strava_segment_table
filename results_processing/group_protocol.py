@@ -6,6 +6,7 @@ from results_processing.results_table import ResultsTable, ResultsItem
 
 class CupItem:
     def __init__(self, first_result: ResultsItem, output_format):
+        self.rank = 0
         self.athlete_name = first_result.athlete_name
         self.athlete_id = first_result.athlete_id
         self.athlete_url = first_result.athlete_url
@@ -59,9 +60,19 @@ class CupTable:
         return None
 
     def sort_by_total_reward(self):
+        self.sort_by("total_reward")
+
+    def sort_by(self, field_name):
         self.table = sorted(
-            self.table, key=lambda competotor: competotor.total_reward, reverse=True
+            self.table, key=lambda competotor: getattr(competotor, field_name, 0), reverse=True
         )
+        for counter in range(1, len(self.table)):
+            if counter > 1 and getattr(self.table[counter - 1], field_name, 0) == getattr(
+                self.table[counter - 2], field_name, 0
+            ):
+                self.table[counter - 1].rank = self.table[counter - 2].rank
+            else:
+                self.table[counter - 1].rank = counter
 
     def __str__(self) -> str:
         return self.__repr__()
