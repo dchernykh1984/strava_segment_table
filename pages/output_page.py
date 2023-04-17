@@ -1,3 +1,13 @@
+import validators
+
+
+def replace_url_by_link(value):
+    if validators.url(value):
+        return f'<a href="{value}">link</a>'
+    else:
+        return value
+
+
 def table_to_html(table_string):
     rows = table_string.split("\n")
     html = "<table>\n"
@@ -11,7 +21,7 @@ def table_to_html(table_string):
         html += "  <tr style='" + bg_color + "'>\n"
         cols = row.split("\t")
         for col in cols:
-            html += "    <td>" + col + "</td>\n"
+            html += "    <td>" + replace_url_by_link(col) + "</td>\n"
         html += "  </tr>\n"
     html += "</table>"
     return html
