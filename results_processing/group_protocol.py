@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from results_processing.results_table import ResultsTable, ResultsItem
+from pages.output_page import table_to_html
 
 
 class CupItem:
@@ -65,3 +66,6 @@ class CupTable:
         for item in self.table:
             result += f"\n{item}"
         return result
+
+    def to_html(self):
+        return table_to_html(str(self))

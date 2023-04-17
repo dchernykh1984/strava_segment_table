@@ -52,6 +52,8 @@ for group_name, segment_filter in groups.items():
         calculate_stage_score(segment_results)
         with open(f"{group_name}_{segment_id}.txt", "w", encoding="utf-8") as protocol:
             protocol.write(f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}")
+        with open(f"{group_name}_{segment_id}.html", "w", encoding="utf-8") as html_protocol:
+            html_protocol.write(f"Link to segment table: {segment_page.segment_url}\n<BR><BR>{segment_results.to_html()}")
         with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
             raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
         group_results.append(segment_results)
@@ -60,5 +62,7 @@ for group_name, segment_filter in groups.items():
     cup_table.sort_by_total_reward()
     with open(f"{group_name}_total.txt", "w", encoding="utf-8") as protocol:
         protocol.write(f"Total protocol\n{str(cup_table)}")
+    with open(f"{group_name}_total.html", "w", encoding="utf-8") as html_protocol:
+        html_protocol.write(f"Link to segment table: {segment_page.segment_url}\n<BR><BR>{segment_results.to_html()}")
 
 driver.quit()

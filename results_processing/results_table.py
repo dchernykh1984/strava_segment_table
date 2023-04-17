@@ -1,5 +1,5 @@
 from datetime import time, datetime
-
+from pages.output_page import table_to_html
 
 class ResultsItem:
     def __init__(self, data: dict, output_format):
@@ -53,3 +53,6 @@ class ResultsTable:
         for item in self.table:
             result += f"\n{item}"
         return result
+
+    def to_html(self):
+        return table_to_html(str(self))
