@@ -31,7 +31,7 @@ total_protocol_sort_by = "total_reward"
 groups = {
     "Female": {
         "age_group": "35_44",
-        "club_id": "1125023",
+        "club_id": "731125",
         "date_range": "this_month",
         "filter": "club",
         "gender": "F",
@@ -39,7 +39,7 @@ groups = {
     },
     "Male": {
         "age_group": "35_44",
-        "club_id": "1125023",
+        "club_id": "731125",
         "date_range": "this_month",
         "filter": "club",
         "gender": "M",
