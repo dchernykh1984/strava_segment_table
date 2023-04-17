@@ -21,6 +21,7 @@ class SegmentPage:
         self.LEADERBOARD_TABLE = (By.XPATH, "//div[@id='results']/table")
         self.LEADERBOARD_ROWS = (By.XPATH, "//div[@id='results']/table/tbody/tr")
         self.NEXT_PAGE_BUTTON = (By.XPATH, "//li[@class='next_page']")
+        self.SEGMENT_NAME = (By.XPATH, "//span[@id='js-full-name']")
 
     def load(self):
         self.driver.get(self.url)
@@ -75,3 +76,9 @@ class SegmentPage:
             else:
                 break
         return full_leaderboard
+
+    def get_segment_name(self) -> str:
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located(self.SEGMENT_NAME)
+        )
+        return element.text
