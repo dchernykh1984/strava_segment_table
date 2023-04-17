@@ -3,15 +3,16 @@ import platform
 from selenium import webdriver
 
 from config import (
-    segment_id,
+    segment_ids,
     strava_login,
     strava_password,
     groups,
-    calculate_score, protocol_columns,
+    calculate_stage_score, segment_protocol_columns, total_protocol_columns, total_score_calculator,
 )
 from pages.login_page import LoginPage
 from pages.segment_page import SegmentPage
 # Set the path to the chromedriver executable
+from results_processing.group_protocol import CupTable
 from results_processing.results_table import ResultsTable
 
 
@@ -29,6 +30,7 @@ def get_chromedriver_path():
     else:
         raise ValueError(f'Unsupported system: {system} {machine}')
 
+
 chromedriver_path_os_part = get_chromedriver_path()
 chromedriver_path = f"chrome_driver/{chromedriver_path_os_part}/chromedriver"
 # Create a new Chrome browser instance
@@ -40,16 +42,23 @@ login_page.set_password(password=strava_password)
 login_page.click_login()
 
 for group_name, segment_filter in groups.items():
-    segment_page = SegmentPage(driver, segment_id, **segment_filter)
-    segment_page.load()
-    leaderboard = segment_page.get_full_leaderboard()
+    group_results = []
+    for segment_id in segment_ids:
+        segment_page = SegmentPage(driver, segment_id, **segment_filter)
+        segment_page.load()
+        leaderboard = segment_page.get_full_leaderboard()
 
-    results = ResultsTable(leaderboard, group_name, protocol_columns)
-    calculate_score(results)
-    with open(f"{group_name}_{segment_id}.txt", "w", encoding="utf-8") as protocol:
-        protocol.write(f"Link to segment table: {segment_page.segment_url}\n{str(results)}")
-    with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
-        raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
+        segment_results = ResultsTable(leaderboard, group_name, segment_protocol_columns)
+        calculate_stage_score(segment_results)
+        with open(f"{group_name}_{segment_id}.txt", "w", encoding="utf-8") as protocol:
+            protocol.write(f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}")
+        with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
+            raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
+        group_results.append(segment_results)
+    cup_table = CupTable(group_results, group_name, total_protocol_columns)
+    total_score_calculator(cup_table)
+    cup_table.sort_by_total_reward()
+    with open(f"{group_name}_total.txt", "w", encoding="utf-8") as protocol:
+        protocol.write(f"Total protocol\n{str(cup_table)}")
 
-
-# driver.quit()
+driver.quit()
