@@ -6,7 +6,7 @@ from results_processing.results_table import ResultsTable
 
 # prize_fund_stage = {"Female": 100.0*female_count, "Male": 100.0*male_count}
 # prize_fund_total = {"Female": 600.0*female_count, "Male": 600.0*female_count}
-segment_ids = ["7258238", "34037962", "34037973", "16055469"]
+segment_ids = ["7258238", "34037962", "34037973", "16055469", "7190094"]
 segment_protocol_columns = {
     "Rank": "rank",
     "Name": "athlete_name",
@@ -26,7 +26,7 @@ total_protocol_columns = {
     # "Total_reward": "total_reward",
     "Link_to_athlete": "athlete_url",
 }
-total_protocol_sort_by = "total_reward"
+total_protocol_sort_by = "cup_score"
 
 groups = {
     "Female": {
