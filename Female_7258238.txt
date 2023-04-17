@@ -1,6 +1,6 @@
 Link to segment table: https://www.strava.com/segments/7258238
 Rank	Name	Result	Score	Reward	Link_to_attempt
-1	Ekaterina 🐎 Stepanova	00:09:28	100.0	3362.4534863678305	https://www.strava.com/segment_efforts/17869621915
-2	Faina Potapova	00:12:24	76.34408602150538	2567.034382065763	https://www.strava.com/segment_efforts/2713327908721174038
-3	Nadia :P	00:14:05	67.2189349112426	2260.205420422399	https://www.strava.com/segment_efforts/2737579984278617900
-4	Marina Varibrus	00:17:35	53.838862559241704	1810.3067111440073	https://www.strava.com/segment_efforts/36311250696
+1	Ekaterina 🐎 Stepanova	00:09:28	100.0	3.3624534863678304	https://www.strava.com/segment_efforts/17869621915
+2	Faina Potapova	00:12:24	76.34408602150538	2.567034382065763	https://www.strava.com/segment_efforts/2713327908721174038
+3	Nadia :P	00:14:05	67.2189349112426	2.2602054204223996	https://www.strava.com/segment_efforts/2737579984278617900
+4	Marina Varibrus	00:17:35	53.838862559241704	1.8103067111440072	https://www.strava.com/segment_efforts/36311250696
