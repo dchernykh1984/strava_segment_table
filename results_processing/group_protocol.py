@@ -66,13 +66,13 @@ class CupTable:
         self.table = sorted(
             self.table, key=lambda competotor: getattr(competotor, field_name, 0), reverse=True
         )
-        for counter in range(1, len(self.table)):
-            if counter > 1 and getattr(self.table[counter - 1], field_name, 0) == getattr(
-                self.table[counter - 2], field_name, 0
+        for counter in range(len(self.table)):
+            if counter > 0 and getattr(self.table[counter], field_name, 0) == getattr(
+                self.table[counter - 1], field_name, 0
             ):
-                self.table[counter - 1].rank = self.table[counter - 2].rank
+                self.table[counter].rank = self.table[counter - 1].rank
             else:
-                self.table[counter - 1].rank = counter
+                self.table[counter].rank = counter + 1
 
     def __str__(self) -> str:
         return self.__repr__()
