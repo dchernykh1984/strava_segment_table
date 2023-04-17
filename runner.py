@@ -63,6 +63,6 @@ for group_name, segment_filter in groups.items():
     with open(f"{group_name}_total.txt", "w", encoding="utf-8") as protocol:
         protocol.write(f"Total protocol\n{str(cup_table)}")
     with open(f"{group_name}_total.html", "w", encoding="utf-8") as html_protocol:
-        html_protocol.write(f"Link to segment table: {segment_page.segment_url}\n<BR><BR>{segment_results.to_html()}")
+        html_protocol.write(f"Total protocol\n<BR><BR>{cup_table.to_html()}")
 
 driver.quit()
