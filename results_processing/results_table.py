@@ -10,13 +10,15 @@ class ResultsItem:
         self.result = self.strava_time_string_to_datetime(data["result"])
         self.attempt_url = data["attempt_url"]
         self.output_format = output_format
+        self.score = 0
+        self.reward = 0
 
     @property
-    def time_in_seconds(self)->int:
+    def time_in_seconds(self) -> int:
         return int(self.result.hour * 3600 + self.result.minute * 60 + self.result.second)
 
     @staticmethod
-    def strava_time_string_to_datetime(time_str: str)->time:
+    def strava_time_string_to_datetime(time_str: str) -> time:
         for format_str in ["%H:%M:%S", "%-H:%M:%S", "%M:%S", "%-M:%S", "%S", "%-S"]:
             try:
                 time_obj = datetime.strptime(time_str, format_str).time()
