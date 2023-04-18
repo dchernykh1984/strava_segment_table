@@ -6,7 +6,13 @@ from results_processing.results_table import ResultsTable
 
 # prize_fund_stage = {"Female": 100.0*female_count, "Male": 100.0*male_count}
 # prize_fund_total = {"Female": 600.0*female_count, "Male": 600.0*female_count}
-segment_ids = ["7258238", "34037962", "34037973", "16055469", "34174721"]
+segment_ids = ["7258238", # Road race flat tupik/nuclear physics (need to check and create my own)
+"34037962", # Road race uphill BAO (maybe too hard - Butakovka is better)
+"34037973", # MTB uphill Kok Zhailiao (maybe we need more easier one)
+"16055469", # MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
+"34174721", # Road race uphill butakovka (The best one I suppose)
+"30058906", # Road race flat promzona (need to check and create my own)
+]
 segment_protocol_columns = {
     "Rank": "rank",
     "Name": "athlete_name",
