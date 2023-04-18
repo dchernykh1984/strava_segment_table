@@ -6,13 +6,18 @@ from results_processing.results_table import ResultsTable
 
 # prize_fund_stage = {"Female": 100.0*female_count, "Male": 100.0*male_count}
 # prize_fund_total = {"Female": 600.0*female_count, "Male": 600.0*female_count}
-segment_ids = ["7258238", # Road race flat tupik/nuclear physics (need to check and create my own)
-"34037962", # Road race uphill BAO (maybe too hard - Butakovka is better)
-"34037973", # MTB uphill Kok Zhailiao (maybe we need more easier one)
-"16055469", # MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
-"34174721", # Road race uphill butakovka (The best one I suppose)
-"30058906", # Road race flat promzona (need to check and create my own)
-"21778768", # Road race flat almaty arena (need to check others and create my own)
+segment_ids = [
+    "34174721",  # [1] Road race uphill butakovka (The best one I suppose) - main one
+    "34037962",  # [2] Road race uphill BAO (maybe too hard - Butakovka is better)
+    "30058906",  # [1] Road race flat promzona (need to check and create my own)
+    "21778768",  # [2] Road race flat almaty arena (need to check others and create my own)
+    "7258238",  #  [3] Road race flat tupik/nuclear physics (need to check and create my own)
+    "25080801",  # [1] MTB uphill, volnyi veter (easier - need to have a look and create my own segment
+    "34037973",  # [2] MTB uphill Kok Zhailiao (maybe we need more easier one)
+    "25901783",  # [1] MTB downhill (Evgeniy's version of downhill) - need to check and create my own segment
+    "28840722",  # [2] MTB downhill, volnyi veter (easier - need to have a look is it safe, create my own segment)
+    "25619150",  # [3] MTB downhill, japan road (need to create my own segment and check current one
+    "16055469",  # [4] MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
 ]
 segment_protocol_columns = {
     "Rank": "rank",
@@ -79,6 +84,7 @@ def total_score_calculator(results_table: CupTable):
     #         competitor.cup_score * prize_fund_stage[results_table.group_name] / cup_sum_score
     #     )
     #     competitor.total_reward = competitor.cup_reward + sum(competitor.stages_rewards)
+
 
 def total_score_calculator_alternative(results_table: CupTable):
     for competitor in results_table.table:
