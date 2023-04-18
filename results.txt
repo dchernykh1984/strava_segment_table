@@ -2,7 +2,6 @@ Results of strava cupGroup Female resultsLink to segment table: https://www.stra
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037962
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/30058906
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/21778768
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/7258238
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25080801
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037973
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25901783
@@ -16,7 +15,6 @@ Rank	Name	Result	Score	Link_to_attempt
 1	Denis Chernykh	00:14:08	100.0	https://www.strava.com/segment_efforts/3083294578678887812Link to segment table: https://www.strava.com/segments/34037962
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/30058906
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/21778768
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/7258238
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25080801
 Rank	Name	Result	Score	Link_to_attempt
 1	Арсений Никитин	00:45:11	100.0	https://www.strava.com/segment_efforts/3081639766362509680Link to segment table: https://www.strava.com/segments/34037973

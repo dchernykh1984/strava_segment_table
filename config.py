@@ -18,7 +18,10 @@ segment_ids = [
     "28840722",  # [2] MTB downhill, volnyi veter (easier - need to have a look is it safe, create my own segment)
     "25619150",  # [3] MTB downhill, japan road (need to create my own segment and check current one
     "16055469",  # [4] MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
-    # So plan: 1. ride to promzona 2. ride to volny veter (check classical uphill and alternative downhill)
+    # So plan:
+    # 1. ride to promzona
+    # 2. ride to volny veter (check classical uphill and alternative downhill)
+    # 3. review Kona and Japan road downhill
 ]
 segment_protocol_columns = {
     "Rank": "rank",
