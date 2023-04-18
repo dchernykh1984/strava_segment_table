@@ -77,8 +77,8 @@ for group_name, segment_filter in groups.items():
                 f'<a href="{segment_page.segment_url}">{segment_name}</a> segment results: \n'
                 f'<BR>{segment_results.to_html()}'
             )
-#         with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
-#             raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
+        #         with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
+        #             raw_data.write(f"Link to segment table: {segment_page.segment_url}\n{str(leaderboard)}")
         group_results.append(segment_results)
     cup_table = CupTable(group_results, group_name, total_protocol_columns)
     total_score_calculator(cup_table)
@@ -96,7 +96,9 @@ for group_name, segment_filter in groups.items():
     with open(f"results.txt", "a", encoding="utf-8") as protocol:
         protocol.write(f"Cup results\n{str(cup_table_alternative)}")
     with open(f"index.html", "a", encoding="utf-8") as html_protocol:
-        html_protocol.write(f"Alternative cup results (2 best stages)\n<BR>{cup_table_alternative.to_html()}")
+        html_protocol.write(
+            f"Alternative cup results (2 best stages)\n<BR>{cup_table_alternative.to_html()}"
+        )
 
 driver.quit()
 print("Results is located https://dchernykh1984.github.io/strava_segment_table/")
