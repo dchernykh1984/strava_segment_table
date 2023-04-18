@@ -12,6 +12,7 @@ segment_ids = ["7258238", # Road race flat tupik/nuclear physics (need to check 
 "16055469", # MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
 "34174721", # Road race uphill butakovka (The best one I suppose)
 "30058906", # Road race flat promzona (need to check and create my own)
+"21778768", # Road race flat almaty arena (need to check others and create my own)
 ]
 segment_protocol_columns = {
     "Rank": "rank",
