@@ -30,7 +30,7 @@ To use this project, follow these steps:
 
 1. Follow the Getting Started steps to set up the project
 2. Run `runner.py` to calculate the cup results
-3. Open the `results.html` file to view the results
+3. Open the `index.html` file to view the results
 
 ## Contributing
 
