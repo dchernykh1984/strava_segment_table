@@ -6,7 +6,7 @@ from results_processing.results_table import ResultsTable
 
 # prize_fund_stage = {"Female": 100.0*female_count, "Male": 100.0*male_count}
 # prize_fund_total = {"Female": 600.0*female_count, "Male": 600.0*female_count}
-segment_ids = ["7258238", "34037962", "34037973", "16055469"]
+segment_ids = ["7258238", "34037962", "34037973", "16055469", "20567229", "16079331"]
 segment_protocol_columns = {
     "Rank": "rank",
     "Name": "athlete_name",
@@ -72,3 +72,10 @@ def total_score_calculator(results_table: CupTable):
     #         competitor.cup_score * prize_fund_stage[results_table.group_name] / cup_sum_score
     #     )
     #     competitor.total_reward = competitor.cup_reward + sum(competitor.stages_rewards)
+
+def total_score_calculator_alternative(results_table: CupTable):
+    for competitor in results_table.table:
+        stages_scores = sorted(competitor.stages_scores, reverse=True)
+        competitor.cup_score = (
+            sum(stages_scores[:2]) if len(stages_scores) >= 2 else sum(stages_scores)
+        )

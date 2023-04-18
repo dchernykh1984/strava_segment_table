@@ -2,16 +2,28 @@ Results of strava cupGroup Female resultsLink to segment table: https://www.stra
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037962
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037973
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/16055469
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/7190094
+Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/20567229
+Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/16079331
 Rank	Name	Result	Score	Link_to_attemptCup results
+Rank	Name	Stages_scores	Total_score	Link_to_athleteCup results
 Rank	Name	Stages_scores	Total_score	Link_to_athleteGroup Male resultsLink to segment table: https://www.strava.com/segments/7258238
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037962
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037973
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/16055469
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/7190094
+Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/20567229
 Rank	Name	Result	Score	Link_to_attempt
-1	Женя Яковенко	00:08:39	100.0	https://www.strava.com/segment_efforts/3081414429948521552
-2	Dmitry TriDhara	00:09:30	91.05263157894737	https://www.strava.com/segment_efforts/3082661898210040778Cup results
+1	Женя Яковенко	00:02:13	100.0	https://www.strava.com/segment_efforts/3082177620986539260
+2	Арсений Никитин	00:03:03	72.6775956284153	https://www.strava.com/segment_efforts/3077464449837648308Link to segment table: https://www.strava.com/segments/16079331
+Rank	Name	Result	Score	Link_to_attempt
+1	Denis Chernykh	00:04:04	100.0	https://www.strava.com/segment_efforts/3079719796964311424
+2	Oleg zigmund Morozov	00:06:19	64.37994722955145	https://www.strava.com/segment_efforts/3077176088937542244Cup results
 Rank	Name	Stages_scores	Total_score	Link_to_athlete
 1	Женя Яковенко	[100.0]	100.0	https://www.strava.com/athletes/14419616
-2	Dmitry TriDhara	[91.05263157894737]	91.05263157894737	https://www.strava.com/athletes/41155344
+1	Denis Chernykh	[100.0]	100.0	https://www.strava.com/athletes/1613761
+3	Арсений Никитин	[72.6775956284153]	72.6775956284153	https://www.strava.com/athletes/51466600
+4	Oleg zigmund Morozov	[64.37994722955145]	64.37994722955145	https://www.strava.com/athletes/6775141Cup results
+Rank	Name	Stages_scores	Total_score	Link_to_athlete
+1	Женя Яковенко	[100.0]	100.0	https://www.strava.com/athletes/14419616
+1	Denis Chernykh	[100.0]	100.0	https://www.strava.com/athletes/1613761
+3	Арсений Никитин	[72.6775956284153]	72.6775956284153	https://www.strava.com/athletes/51466600
+4	Oleg zigmund Morozov	[64.37994722955145]	64.37994722955145	https://www.strava.com/athletes/6775141
