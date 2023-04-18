@@ -8,7 +8,7 @@ from results_processing.results_table import ResultsTable
 # prize_fund_total = {"Female": 600.0*female_count, "Male": 600.0*female_count}
 segment_ids = [
     "34174721",  # [1] Road race uphill butakovka (The best one I suppose) - main one
-    "34037962",  # [2] Road race uphill BAO (maybe too hard - Butakovka is better)
+#     "34037962",  # [2] Road race uphill BAO (maybe too hard - Butakovka is better)
     "30058906",  # [1] Road race flat promzona (need to check and create my own)
     "21778768",  # [2] Road race flat almaty arena (need to check others and create my own)
     # "7258238",  #  [3 - no] Road race flat tupik/nuclear physics (need to check and create my own) - don't break road rules
