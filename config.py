@@ -9,8 +9,8 @@ from results_processing.results_table import ResultsTable
 segment_ids = [
     "34174721",  # [1] Road race uphill butakovka (The best one I suppose) - main one
 #     "34037962",  # [2] Road race uphill BAO (maybe too hard - Butakovka is better)
-    "30058906",  # [1] Road race flat promzona (need to check and create my own)
-    "21778768",  # [2] Road race flat almaty arena (need to check others and create my own)
+    "34189618",  # [1] Road race flat promzona
+    "34189982",  # [2] Road race flat almaty arena
     # "7258238",  #  [3 - no] Road race flat tupik/nuclear physics (need to check and create my own) - don't break road rules
     "25080801",  # [1] MTB uphill, volnyi veter (easier - need to have a look and create my own segment, also check if it is possible to ride there by road race bike
     "34037973",  # [2] MTB uphill Kok Zhailiao (maybe we need more easier one)
@@ -19,7 +19,7 @@ segment_ids = [
     "25619150",  # [3] MTB downhill, japan road (need to create my own segment and check current one
     "16055469",  # [4] MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
     # So plan:
-    # 1. ride to promzona
+    # [DONE]1. ride to promzona
     # 2. ride to volny veter (check classical uphill and alternative downhill)
     # 3. review Kona and Japan road downhill
 ]

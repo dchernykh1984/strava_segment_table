@@ -1,21 +1,25 @@
 Results of strava cupGroup Female resultsLink to segment table: https://www.strava.com/segments/34174721
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037962
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/30058906
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/21778768
+Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34189618
+Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34189982
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25080801
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/34037973
+Rank	Name	Result	Score	Link_to_attempt
+1	Natalya KimTsoy	00:45:50	100.0	https://www.strava.com/segment_efforts/3081630160010834000Link to segment table: https://www.strava.com/segments/34037973
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25901783
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/28840722
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25619150
+Rank	Name	Result	Score	Link_to_attempt
+1	Natalya KimTsoy	00:10:05	100.0	https://www.strava.com/segment_efforts/3081630160010190928Link to segment table: https://www.strava.com/segments/25619150
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/16055469
 Rank	Name	Result	Score	Link_to_attemptCup results
-Rank	Name	Stages_scores	Total_score	Link_to_athleteCup results
-Rank	Name	Stages_scores	Total_score	Link_to_athleteGroup Male resultsLink to segment table: https://www.strava.com/segments/34174721
+Rank	Name	Stages_scores	Total_score	Link_to_athlete
+1	Natalya KimTsoy	[100.0, 100.0]	200.0	https://www.strava.com/athletes/5662095Cup results
+Rank	Name	Stages_scores	Total_score	Link_to_athlete
+1	Natalya KimTsoy	[100.0, 100.0]	200.0	https://www.strava.com/athletes/5662095Group Male resultsLink to segment table: https://www.strava.com/segments/34174721
 Rank	Name	Result	Score	Link_to_attempt
-1	Denis Chernykh	00:14:08	100.0	https://www.strava.com/segment_efforts/3083294578678887812Link to segment table: https://www.strava.com/segments/34037962
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/30058906
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/21778768
-Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25080801
+1	Denis Chernykh	00:14:08	100.0	https://www.strava.com/segment_efforts/3083294578678887812Link to segment table: https://www.strava.com/segments/34189618
+Rank	Name	Result	Score	Link_to_attempt
+1	Denis Chernykh	00:09:29	100.0	https://www.strava.com/segment_efforts/3084021263166787696Link to segment table: https://www.strava.com/segments/34189982
+Rank	Name	Result	Score	Link_to_attempt
+1	Жахангир Сабит	00:12:23	100.0	https://www.strava.com/segment_efforts/3084041067520492052Link to segment table: https://www.strava.com/segments/25080801
 Rank	Name	Result	Score	Link_to_attempt
 1	Арсений Никитин	00:45:11	100.0	https://www.strava.com/segment_efforts/3081639766362509680Link to segment table: https://www.strava.com/segments/34037973
 Rank	Name	Result	Score	Link_to_attemptLink to segment table: https://www.strava.com/segments/25901783
@@ -28,12 +32,14 @@ Rank	Name	Result	Score	Link_to_attempt
 1	Dmitrii Paskov	00:27:31	100.0	https://www.strava.com/segment_efforts/3077549130027232602Link to segment table: https://www.strava.com/segments/16055469
 Rank	Name	Result	Score	Link_to_attemptCup results
 Rank	Name	Stages_scores	Total_score	Link_to_athlete
+1	Denis Chernykh	[100.0, 100.0]	200.0	https://www.strava.com/athletes/1613761
 1	Арсений Никитин	[100.0, 100.0]	200.0	https://www.strava.com/athletes/51466600
-2	Женя Яковенко	[100.0, 89.98527245949926]	189.98527245949924	https://www.strava.com/athletes/14419616
-3	Denis Chernykh	[100.0]	100.0	https://www.strava.com/athletes/1613761
-3	Dmitrii Paskov	[100.0]	100.0	https://www.strava.com/athletes/4933012Cup results
+3	Женя Яковенко	[100.0, 89.98527245949926]	189.98527245949924	https://www.strava.com/athletes/14419616
+4	Жахангир Сабит	[100.0]	100.0	https://www.strava.com/athletes/103061417
+4	Dmitrii Paskov	[100.0]	100.0	https://www.strava.com/athletes/4933012Cup results
 Rank	Name	Stages_scores	Total_score	Link_to_athlete
+1	Denis Chernykh	[100.0, 100.0]	200.0	https://www.strava.com/athletes/1613761
 1	Арсений Никитин	[100.0, 100.0]	200.0	https://www.strava.com/athletes/51466600
-2	Женя Яковенко	[100.0, 89.98527245949926]	189.98527245949924	https://www.strava.com/athletes/14419616
-3	Denis Chernykh	[100.0]	100.0	https://www.strava.com/athletes/1613761
-3	Dmitrii Paskov	[100.0]	100.0	https://www.strava.com/athletes/4933012
+3	Женя Яковенко	[100.0, 89.98527245949926]	189.98527245949924	https://www.strava.com/athletes/14419616
+4	Жахангир Сабит	[100.0]	100.0	https://www.strava.com/athletes/103061417
+4	Dmitrii Paskov	[100.0]	100.0	https://www.strava.com/athletes/4933012
