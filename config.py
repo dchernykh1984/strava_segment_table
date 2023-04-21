@@ -9,7 +9,7 @@ from results_processing.results_table import ResultsTable
 segment_ids = [
     "34174721",  # [1] Road race uphill butakovka (The best one I suppose) - main one
 #     "34037962",  # [2] Road race uphill BAO (maybe too hard - Butakovka is better)
-    "34189618",  # [1] Road race flat promzona
+    "34192312",  # [1] Road race flat promzona
 #     "34189982",  # [2] Road race flat almaty arena
     # "7258238",  #  [3 - no] Road race flat tupik/nuclear physics (need to check and create my own) - don't break road rules
     "25080801",  # [1] MTB uphill, volnyi veter (easier - need to have a look and create my own segment, also check if it is possible to ride there by road race bike

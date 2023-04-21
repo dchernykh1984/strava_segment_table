@@ -70,11 +70,11 @@ for group_name, segment_filter in groups.items():
         calculate_stage_score(segment_results)
         with open(f"results.txt", "a", encoding="utf-8") as protocol:
             protocol.write(
-                f"Link to segment table: {segment_page.segment_url}\n{str(segment_results)}"
+                f"Link to segment table: {segment_page.url}\n{str(segment_results)}"
             )
         with open(f"index.html", "a", encoding="utf-8") as html_protocol:
             html_protocol.write(
-                f'<a href="{segment_page.segment_url}">{segment_name}</a> segment results: \n'
+                f'<a href="{segment_page.url}">{segment_name}</a> segment results: \n'
                 f'<BR>{segment_results.to_html()}'
             )
         #         with open(f"{group_name}_{segment_id}_raw.txt", "w", encoding="utf-8") as raw_data:
