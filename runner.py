@@ -69,9 +69,7 @@ for group_name, segment_filter in groups.items():
         segment_results = ResultsTable(leaderboard, group_name, segment_protocol_columns)
         calculate_stage_score(segment_results)
         with open(f"results.txt", "a", encoding="utf-8") as protocol:
-            protocol.write(
-                f"Link to segment table: {segment_page.url}\n{str(segment_results)}"
-            )
+            protocol.write(f"Link to segment table: {segment_page.url}\n{str(segment_results)}")
         with open(f"index.html", "a", encoding="utf-8") as html_protocol:
             html_protocol.write(
                 f'<a href="{segment_page.url}">{segment_name}</a> segment results: \n'
