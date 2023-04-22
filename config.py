@@ -14,7 +14,7 @@ segment_ids = [
     # "7258238",  #  [3 - no] Road race flat tupik/nuclear physics (need to check and create my own) - don't break road rules
     "34204769",  # [1] MTB uphill, volnyi veter (easier - need to have a look and create my own segment, also check if it is possible to ride there by road race bike
     # "34037973",  # [2] MTB uphill Kok Zhailiao (maybe we need more easier one)
-    "25901783",  # [1] MTB downhill (Evgeniy's version of downhill) - need to check and create my own segment
+    # "25901783",  # [1] MTB downhill (Evgeniy's version of downhill) - need to check and create my own segment
     "28840722",  # [2] MTB downhill, volnyi veter (easier - need to have a look is it safe, create my own segment)
     "25619150",  # [3] MTB downhill, japan road (need to create my own segment and check current one
     "16055469",  # [4] MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
