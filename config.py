@@ -8,38 +8,22 @@ from results_processing.results_table import ResultsTable
 # prize_fund_total = {"Female": 600.0*female_count, "Male": 600.0*female_count}
 segment_ids = [
     "34174721",  # [1] Road race uphill butakovka (The best one I suppose) - main one
-    #     "34037962",  # [2] Road race uphill BAO (maybe too hard - Butakovka is better)
     "34192312",  # [1] Road race flat promzona
-    #     "34189982",  # [2] Road race flat almaty arena
-    # "7258238",  #  [3 - no] Road race flat tupik/nuclear physics (need to check and create my own) - don't break road rules
     "34204769",  # [1] MTB uphill, volnyi veter (easier - need to have a look and create my own segment, also check if it is possible to ride there by road race bike
-    # "34037973",  # [2] MTB uphill Kok Zhailiao (maybe we need more easier one)
-    # "25901783",  # [1] MTB downhill (Evgeniy's version of downhill) - need to check and create my own segment
-    "28840722",  # [2] MTB downhill, volnyi veter (easier - need to have a look is it safe, create my own segment)
-    "25619150",  # [3] MTB downhill, japan road (need to create my own segment and check current one
-    "16055469",  # [4] MTB downhill Kona-track (maybe we need more easier one, also need to check it and create my own segment)
-    # So plan:
-    # [DONE]1. ride to promzona
-    # 2. ride to volny veter (check classical uphill and alternative downhill)
-    # 3. review Kona and Japan road downhill
+    "34212945",  # [3] MTB downhill, japan road (need to create my own segment and check current one
 ]
 segment_protocol_columns = {
     "Rank": "rank",
     "Name": "athlete_name",
     "Result": "result",
     "Score": "score",
-    # "Reward": "reward",
     "Link_to_attempt": "attempt_url",
 }
 total_protocol_columns = {
     "Rank": "rank",
     "Name": "athlete_name",
-    # "ID": "athlete_id",
     "Stages_scores": "stages_scores",
     "Total_score": "cup_score",
-    # "Stage_rewards": "stages_rewards",
-    # "Cup_reward": "cup_reward",
-    # "Total_reward": "total_reward",
     "Link_to_athlete": "athlete_url",
 }
 total_protocol_sort_by = "cup_score"
@@ -69,11 +53,6 @@ def calculate_stage_score(results_table: ResultsTable):
         competitor.score = (
             100.0 * results_table.get_leader().time_in_seconds / competitor.time_in_seconds
         )
-    # sum_score = sum([competitor.score for competitor in results_table.table])
-    # for competitor in results_table.table:
-    #     competitor.reward = (
-    #         competitor.score * prize_fund_stage[results_table.group_name] / sum_score
-    #     )
 
 
 def total_score_calculator(results_table: CupTable):
@@ -82,12 +61,6 @@ def total_score_calculator(results_table: CupTable):
         competitor.cup_score = (
             sum(stages_scores[:3]) if len(stages_scores) >= 3 else sum(stages_scores)
         )
-    # cup_sum_score = sum([competitor.cup_score for competitor in results_table.table])
-    # for competitor in results_table.table:
-    #     competitor.cup_reward = (
-    #         competitor.cup_score * prize_fund_stage[results_table.group_name] / cup_sum_score
-    #     )
-    #     competitor.total_reward = competitor.cup_reward + sum(competitor.stages_rewards)
 
 
 def total_score_calculator_alternative(results_table: CupTable):
